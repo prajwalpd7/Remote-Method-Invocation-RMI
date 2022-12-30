@@ -34,8 +34,25 @@ You can customize the remote object by modifying the `MyClass` class in the serv
 Remote Method Invocation is a powerful technique for building distributed systems, and Pyro makes it easy to get started with RMI in Python. This demonstration is just a simple example of the capabilities of RMI, and there are many other ways that RMI can be used in a variety of applications.
 
 
+# Running the Pyro RMI Demonstration
 
-##Run the following in 3 terminals:
+To run the Pyro RMI demonstration, you will need to open three terminal windows and run the following commands in each window:
+
+Terminal 1:
 python -m Pyro4.naming
+
+Terminal 2:
 python client.py
+
+Terminal 3:
 python server.py
+
+
+The `python -m Pyro4.naming` command starts the Pyro name server, which is responsible for managing the communication between the client and server. The `python client.py` command starts the client script, which sends a request to the server to invoke a method on a remote object. The `python server.py` command starts the server script, which hosts the remote object and responds to requests from the client.
+
+With all three terminals running, you should see the client and server communicate with each other and execute the remote method.
+
+## Additional Notes
+
+This demonstration uses Pyro to enable remote communication between the client and server. Pyro is a powerful library for building distributed systems in Python, and this demonstration is just a simple example of the capabilities of Pyro. There are many other ways that Pyro can be used in a variety of applications.
+
